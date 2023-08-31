@@ -1,0 +1,137 @@
+@import "../page-entrance/page-entrance.component.scss";
+.container-fluid {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+    // background-color: transparent;
+}
+
+.expanding-div {
+  flex: 1 1 auto;
+  transition: width 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  margin: 62px;
+}
+
+.expanding-div.side-by-side {
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px;
+  margin-right: 5rem;
+}
+
+.expanding-div span {
+  white-space: nowrap;
+  margin-right: 20px;
+  color: #FC6D6D;
+}
+/* Add this animation definition to your existing CSS */
+@keyframes slideSpan {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to spans within the side-by-side container */
+.expanding-div.side-by-side .animate {
+  opacity: 0;
+  animation: slideSpan 0.5s ease-out forwards;
+}
+
+/* Apply delay to each span based on its position */
+.expanding-div.side-by-side .animate:nth-child(1) {
+  animation-delay: 0.1s;
+  color: #5ac768;
+}
+
+.expanding-div.side-by-side .animate:nth-child(2) {
+  animation-delay: 0.3s;
+  color: #e2c259;
+}
+
+.expanding-div.side-by-side .animate:nth-child(3) {
+  animation-delay: 0.6s;
+  color: #3860b8;
+}
+
+.expanding-div.side-by-side .animate:nth-child(4) {
+  animation-delay: 1.0s;
+  color:#ff4843;
+}
+.expanding-div .animate{
+  padding-right: 8rem;
+}
+.login{
+  cursor: pointer;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.loader{
+  margin-right: 20px;
+}
+
+.logo {
+  // flex: 1 1 auto;
+  transition: width 0.3s ease-in-out;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  // text-align: end;
+  color: #fff;
+  margin-left: 60px;
+}
+
+.logo.side-by-side {
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 0px;
+}
+
+.logo span {
+  white-space: nowrap;
+  // margin-right: 20px;
+}
+/* Add this animation definition to your existing CSS */
+@keyframes slideSpan {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to spans within the side-by-side container */
+.logo.side-by-side .letter {
+  opacity: 0;
+  animation: slideSpan 0.5s ease-out forwards;
+}
+
+/* Apply delay to each span based on its position */
+.logo.side-by-side .letter:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.logo.side-by-side .letter:nth-child(2) {
+  animation-delay: 0.2s;
+}

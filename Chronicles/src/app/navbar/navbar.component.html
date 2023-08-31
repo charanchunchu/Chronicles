@@ -1,0 +1,17 @@
+<div class="navbar-container">
+  <div class="container-fluid">
+    <div class="logo" [ngClass]="{'side-by-side': isSideBySide}">
+      <span class="loader" *ngIf="isSideBySide"></span>
+      <h1><span class="letter">C</span>hroni<span class="letter">C</span>les
+      </h1>
+    </div>
+
+    <div class="expanding-div" [ngStyle]="{'width.px': divWidth}" [ngClass]="{'side-by-side': isSideBySide}">
+      <span class="animate login" (click)="login()">Login</span>
+      <span class="animate">Address</span>
+      <span class="animate">Portfolio</span>
+      <span class="animate">Email@gmail.com</span>
+    </div>
+  </div>
+
+</div>
